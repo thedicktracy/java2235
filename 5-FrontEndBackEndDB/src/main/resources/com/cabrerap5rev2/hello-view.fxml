@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cabrerap5rev2.HelloController">
+   <children>
+      <TableView fx:id="table" layoutX="223.0" layoutY="41.0" prefHeight="317.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="key" onEditCommit="#onEdit" prefWidth="75.0" text="key" />
+          <TableColumn fx:id="uniq" onEditCommit="#onEditUniq" prefWidth="75.0" text="uniq" />
+            <TableColumn fx:id="year" onEditCommit="#onEditYear" prefWidth="75.0" text="year" />
+            <TableColumn fx:id="make" onEditCommit="#onEditMake" prefWidth="75.0" text="make" />
+            <TableColumn fx:id="model" onEditCommit="#onEditModel" prefWidth="75.0" text="model" />
+        </columns>
+      </TableView>
+      <Button fx:id="insert" layoutX="32.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#insertonclick" text="insert">
+         <tooltip>
+            <Tooltip fx:id="inserttooltip" text="insert data (sequentially) from fields below " />
+         </tooltip></Button>
+      <Button fx:id="createTable" layoutX="30.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#createTable" text="createTable">
+         <tooltip>
+            <Tooltip fx:id="createtabletooltip" text="displays DB data in the table to the right" />
+         </tooltip></Button>
+      <Label layoutX="12.0" layoutY="114.0" text="key (search)" />
+      <Label layoutX="32.0" layoutY="144.0" text="uniq" />
+      <Label layoutX="32.0" layoutY="173.0" text="year" />
+      <Label layoutX="32.0" layoutY="200.0" text="make" />
+      <Label layoutX="32.0" layoutY="228.0" text="model" />
+      <TextField fx:id="keytfield" layoutX="77.0" layoutY="110.0" onAction="#keylisten" onKeyPressed="#keylisten" onKeyTyped="#search" prefHeight="25.0" prefWidth="77.0" />
+      <TextField fx:id="uniqtfield" layoutX="66.0" layoutY="140.0" onAction="#uniqlisten" prefHeight="25.0" prefWidth="77.0" />
+      <TextField fx:id="yeartfield" layoutX="69.0" layoutY="169.0" onAction="#yearlisten" prefHeight="25.0" prefWidth="77.0" />
+      <TextField fx:id="maketfield" layoutX="69.0" layoutY="196.0" onAction="#makelisten" prefHeight="25.0" prefWidth="77.0" />
+      <TextField fx:id="modeltfield" layoutX="69.0" layoutY="224.0" onAction="#modellisten" prefHeight="25.0" prefWidth="77.0" />
+      <Button fx:id="populatedb" layoutX="81.0" layoutY="41.0" mnemonicParsing="false" onAction="#populatedb" prefHeight="25.0" prefWidth="95.0" text="PopulateDB">
+         <tooltip>
+            <Tooltip fx:id="populatedbtooltip" text="Empty Tooltip" />
+         </tooltip></Button>
+      <Button fx:id="enterid" layoutX="158.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#insertedit" text="EnterID">
+         <tooltip>
+            <Tooltip fx:id="enteridtooltip" text="will edit a cell (based on key search)" />
+         </tooltip></Button>
+      <Button fx:id="delete" layoutX="66.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#deleteRow" text="Delete Row">
+         <tooltip>
+            <Tooltip fx:id="deleteselectedrowtooltip" text="click here after selecting a row to delete it" />
+         </tooltip></Button>
+      <Button fx:id="setupdb" layoutX="108.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#setupDB" text="MockDB">
+         <tooltip>
+            <Tooltip fx:id="mockdbtooltip" text="will enter in dummy data into DB (ease of use)" />
+         </tooltip></Button>
+      <Button fx:id="cleardb" layoutX="29.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#cleardb" text="ClearDB">
+         <tooltip>
+            <Tooltip fx:id="cleardbtooltip" text="clear the back end database" />
+         </tooltip></Button>
+      <Button fx:id="droptable" layoutX="90.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#dropTable" text="dropTable">
+         <tooltip>
+            <Tooltip fx:id="droptabletooltip" text="clear the table to the right (not the database)" />
+         </tooltip></Button>
+      <Button fx:id="cleartextfields" layoutX="75.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#clearTextfields" text="ClearTextfields" />
+   </children>
+</AnchorPane>
