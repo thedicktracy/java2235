@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cis2235.cabrerap7rev3.HelloController">
+    <children>
+        <ImageView fx:id="threecardbragimage" cache="true" fitHeight="150.0" fitWidth="200.0" layoutX="31.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../pics/brag.png" />
+            </image>
+        </ImageView>
+        <TextArea layoutX="199.0" layoutY="24.0" prefHeight="143.0" prefWidth="150.0" text="Program 7&#10;Robert Cabrera&#10;Three Card Brag!" />
+        <TextArea fx:id="detail" layoutX="360.0" layoutY="24.0" prefHeight="143.0" prefWidth="161.0" />
+        <Button fx:id="playagain" layoutX="555.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#playagain" prefHeight="121.0" prefWidth="95.0" text="Play Again" />
+        <Button fx:id="dealcards" layoutX="537.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#dealcards" prefHeight="143.0" prefWidth="131.0" text="Deal Cards" />
+        <Button fx:id="showwinner" layoutX="537.0" layoutY="411.0" mnemonicParsing="false" onMouseClicked="#showinner" prefHeight="143.0" prefWidth="131.0" text="Show Winner" />
+        <TextArea fx:id="playertwo" layoutX="14.0" layoutY="411.0" prefHeight="143.0" prefWidth="120.0" />
+        <TextArea fx:id="playerone" layoutX="14.0" layoutY="228.0" prefHeight="143.0" prefWidth="120.0" />
+        <ImageView fx:id="redone" fitHeight="150.0" fitWidth="120.0" layoutX="154.0" layoutY="225.0" onMouseClicked="#redoneclicked" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@../../../pics/b2fv.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="redtwo" fitHeight="150.0" fitWidth="120.0" layoutX="274.0" layoutY="225.0" onMouseClicked="#redtwoclicked" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@../../../pics/b2fv.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="redthree" fitHeight="150.0" fitWidth="120.0" layoutX="392.0" layoutY="225.0" onMouseClicked="#redthreeclicked" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@../../../pics/b2fv.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="redfour" fitHeight="150.0" fitWidth="120.0" layoutX="154.0" layoutY="404.0" onMouseClicked="#redfourclicked" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@../../../pics/b2fv.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="redfive" fitHeight="150.0" fitWidth="120.0" layoutX="274.0" layoutY="404.0" onMouseClicked="#redfiveclicked" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@../../../pics/b2fv.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="redsix" fitHeight="150.0" fitWidth="120.0" layoutX="392.0" layoutY="404.0" onMouseClicked="#redsixclicked" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@../../../pics/b2fv.png" />
+            </image>
+        </ImageView>
+      <Label layoutX="195.0" layoutY="208.0" text="Card1" />
+      <Label layoutX="315.0" layoutY="208.0" text="Card2" />
+      <Label layoutX="427.0" layoutY="208.0" text="Card3" />
+    </children>
+</AnchorPane>
